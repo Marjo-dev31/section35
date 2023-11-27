@@ -3,7 +3,9 @@ const express = require('express');
 const db = require('./data/database');
 const todosRoutes = require('./routes/todos.routes')
 const app = express();
+const enableCors = require('./middleware/cors')
 
+app.use(enableCors)
 app.use(express.json());
 
 app.use('/todos', todosRoutes);
