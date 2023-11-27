@@ -28,7 +28,7 @@ async function addTodo(req, res, next) {
     }
 
     todo.id = insertedId.toString();
-    res.json({ message: 'Added todo successfully!', createTodo: todo })
+    res.json({ message: 'Added todo successfully!', createdTodo: todo })
 }
 
 async function updateTodo(req, res, next) {
